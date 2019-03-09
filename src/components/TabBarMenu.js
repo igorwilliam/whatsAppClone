@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, Text, StatusBar, Image} from 'react-native';
+import {View, Text, StatusBar, Image, TouchableHighlight} from 'react-native';
 import {TabBar} from 'react-native-tab-view';
+import {Actions} from 'react-native-router-flux';
 
 export default props => (
     <View style={{ backgroundColor: '#115E54', elevation: 10, marginBottom: 15}}>
@@ -12,8 +13,13 @@ export default props => (
             </View>
 
             <View style={{flexDirection: 'row', marginRight: 20}}>
-                <View style={{ width: 50, justifyContent: 'center'}}>
-                    <Image source={require('../imgs/adicionar-contato.png')}/>
+                <View style={{ width: 50, justifyContent: 'center', alignItems: 'center'}}>
+                    <TouchableHighlight
+                        onPress={() => Actions.adicionarContato()}
+                        underlayColor='#114D44'
+                    >
+                        <Image source={require('../imgs/adicionar-contato.png')}/>   
+                    </TouchableHighlight>
                 </View>
                 <View style={{justifyContent: 'center'}}>
                     <Text style={{ fontSize: 20, color: 'white'}}>Sair</Text>

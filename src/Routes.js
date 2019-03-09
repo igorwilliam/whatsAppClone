@@ -5,6 +5,7 @@ import FormLogin from './components/FormLogin';
 import FormCadastro from './components/FormCadastro';
 import BoasVindas from './components/BoasVindas';
 import Principal from './components/Principal';
+import AdicionarContatos from './components/AdicionarContatos'
 
 export default props => (
     <Router navigationBarStyle={{backgroundColor: '#115E54'}} titleStyle={{color:'#fff'}}>
@@ -13,6 +14,7 @@ export default props => (
             <Scene key="formCadastro" component={FormCadastro} title="Cadastro"/>         
             <Scene key="boasVindas" component={BoasVindas} title="Bem-Vindo" hideNavBar/>
             <Scene key="principal" component={Principal} title="Principal" hideNavBar initial/>
+            <Scene key="adicionarContato" component={AdicionarContatos} title="Adicionar Contato" />
         </Scene>
     </Router>
 
